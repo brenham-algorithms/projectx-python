@@ -5,6 +5,10 @@ description = "Python client for ProjectX/TopstepX API"
 requires-python = ">=3.12"
 dependencies = [
     "requests>=2.34.2",
+    "isort>=8.0.1",
+    "black>=26.5.1",
+    "mypy>=2.1.0",
+    "types-requests>=2.33.0",
 ]
 
 [build-system]
@@ -13,3 +17,9 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 include = ["projectx_client*"]
+
+[tool.black]
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
