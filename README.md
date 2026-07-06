@@ -2,7 +2,7 @@
 
 Python client for the ProjectX/TopstepX API. Provides authentication, market data retrieval, and order management.
 
-Used as a shared dependency by [level-farmer](https://github.com/brenham-algorithms/level-farmer) and [distributor](https://github.com/brenham-algorithms/distributor).
+Used as a shared dependency by [farmer](https://github.com/brenham-algorithms/farmer) and [distributor](https://github.com/brenham-algorithms/distributor).
 
 ## Installation
 
