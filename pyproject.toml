@@ -23,3 +23,7 @@ target-version = ["py312"]
 
 [tool.isort]
 profile = "black"
+
+[tool.mypy]
+python_version = "3.12"
+exclude = ["^venv/", "^\\.venv/"]
