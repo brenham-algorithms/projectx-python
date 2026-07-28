@@ -19,7 +19,7 @@ class Orders:
             "Content-Type": "application/json",
         }
 
-        logger.info(json.dumps({"event": "place_request", "args": payload}))
+        logger.debug(json.dumps({"event": "place_request", "args": payload}))
 
         response = requests.post(url, headers=headers, json=payload)
         response.raise_for_status()
@@ -53,7 +53,7 @@ class Orders:
             "Content-Type": "application/json",
         }
 
-        logger.info(json.dumps({"event": "cancel_request", "args": payload}))
+        logger.debug(json.dumps({"event": "cancel_request", "args": payload}))
 
         response = requests.post(url, headers=headers, json=payload)
         response.raise_for_status()
