@@ -27,3 +27,16 @@ class Positions:
         positions = response.json()["positions"]
 
         return positions
+
+    def close_contract(self, **payload):
+        url = f"{self.base_url}/api/Position/closeContract"
+
+        headers = {
+            "Authorization": f"Bearer {self.jwt_token}",
+            "Content-Type": "application/json",
+        }
+
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+
+        return response.json()
