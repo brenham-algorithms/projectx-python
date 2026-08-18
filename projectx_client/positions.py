@@ -40,3 +40,16 @@ class Positions:
         response.raise_for_status()
 
         return response.json()
+
+    def partial_close_contract(self, **payload):
+        url = f"{self.base_url}/api/Position/partialCloseContract"
+
+        headers = {
+            "Authorization": f"Bearer {self.jwt_token}",
+            "Content-Type": "application/json",
+        }
+
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+
+        return response.json()
